@@ -23,3 +23,8 @@
 .article_image {
     margin-bottom: 30px;
 }
+
+h1 a{
+    text-decoration: none;
+    color: black;
+}
