@@ -1,0 +1,19 @@
+{
+    "name": "algirdas/gandas.lt",
+    "description": "Naujienu portalas apie mane",
+    "autoload": {
+        "psr-4": {
+            "": "app/code"
+        }
+    },
+    "authors": [
+        {
+            "name": "algirdas",
+            "email": "algirdas@gandas.lt"
+        }
+    ],
+    "require": {
+        "aura/sqlquery": "^2.7",
+        "twig/twig": "^3.3"
+    }
+}

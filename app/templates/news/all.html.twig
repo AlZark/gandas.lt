@@ -1,0 +1,28 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{% endblock %}
+{% block head %}
+    {{ parent() }}
+
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+    {% for new in news %}
+    <div class="article col-6">
+        <div class="title">
+            <h1>{{new.title}}</h1>
+        </div>
+        <div class="date col-6">
+            <p>{{new.createdAt}}</p>
+        </div>
+        <div class="article_image col-6">
+            <img width=600 src="{{new.image}}">
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+.footer {
+    padding-top: 20px;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+}
+
+.nav-link {
+    color: black;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+}
+
+.article_image {
+    margin-bottom: 30px;
+}

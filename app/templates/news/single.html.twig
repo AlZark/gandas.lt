@@ -1,0 +1,31 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ new.title }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+
+{% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="title">
+            <h1>{{ new.title }}</h1>
+        </div>
+        <div class="date">
+            <p>{{ new.createdAt }}</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-4 article_image">
+                    <img src="{{ new.image }}">
+                </div>
+                <div class="col-12 col-md-8 article_content">
+                    {{ new.content }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
