@@ -5,7 +5,10 @@ use Aura\SqlQuery\QueryFactory;
 class ModelAbstract
 {
     protected QueryFactory $queryFactory;
+
     protected DB $db;
+
+    protected array $data;
 
     public function __construct()
     {
@@ -31,6 +34,17 @@ class ModelAbstract
     protected function delete()
     {
         return $this->queryFactory->newDelete();
+    }
+
+    protected function assignData(): void
+    {
+        $this->data = [];
+    }
+
+    public function save(): void
+    {
+        $this->assignData();
+        $this->create();
     }
 
 }

@@ -21,8 +21,10 @@ class News extends ControllerAbstract
 
     public function all()
     {
-        $news = new \Model\News();
-        $articles = $news->getAllNews();
-        $this->twig->display('news/all.html.twig', ['news' => $articles]);
+        $news = new \Model\Collections\News();
+        $news->filter('active', 1);
+        $news->order('views', 'ASC');
+        $news->limit(2);
+        $this->twig->display('news/all.html.twig', ['news' => $news->get()]);
     }
 }

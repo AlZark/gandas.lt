@@ -1,0 +1,32 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Register{% endblock %}
+{% block head %}
+    {{ parent() }}
+
+{% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="register">
+            <form action="create" method="POST">
+                <label>First name:</label><br>
+                <input type="text" name="firstName" placeholder="John"><br>
+                <label>Last name:</label><br>
+                <input type="text" name="lastName" placeholder="Doe"><br>
+                <label>Username:</label><br>
+                <input type="text" name="nickname" placeholder="Doe"><br>
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="example@email.com"><br>
+                <label>Password:</label><br>
+                <input type="password" name="password" placeholder="*********"><br>
+                <label>Repeat password:</label><br>
+                <input type="password" name="password2" placeholder="*********"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+

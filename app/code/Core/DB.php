@@ -8,7 +8,6 @@ class DB
 
     public function __construct()
     {
-
         try {
             $this->pdo = new \PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -30,5 +29,11 @@ class DB
         $sth = $this->pdo->prepare($sql->getStatement());
         $sth->execute($sql->getBindValues());
         return $sth->fetch(\PDO::FETCH_ASSOC);
+    }
+
+    public function insertOne($sql)
+    {
+        $sth = $this->pdo->prepare($sql->getStatement());
+        $sth->execute($sql->getBindValues());
     }
 }

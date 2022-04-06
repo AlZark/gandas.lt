@@ -187,17 +187,4 @@ class News extends ModelAbstract
         }
     }
 
-    public function getAllNews()
-    {
-        $sql = $this->select();
-        $sql->cols(['*'])->from('news');
-        $rez = $this->db->get($sql);
-        $news = [];
-        foreach ($rez as $element) {
-            $new = new News();
-            $new->load((int)$element['id']);
-            $news[] = $new;
-        }
-        return $news;
-    }
 }
